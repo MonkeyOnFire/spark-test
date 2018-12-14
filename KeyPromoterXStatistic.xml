@@ -305,6 +305,14 @@
           <Count>22</Count>
         </Item>
       </Statistic>
+      <Statistic Action="Replace in Path...">
+        <Item>
+          <IdeaActionID>ReplaceInPath</IdeaActionID>
+          <ShortCut>'Ctrl+Shift+R'</ShortCut>
+          <Description>Replace in Path...</Description>
+          <Count>1</Count>
+        </Item>
+      </Statistic>
       <Statistic Action="Rerun '-Djetty.port=8081 jetty:run'">
         <Item>
           <IdeaActionID>Rerun</IdeaActionID>
