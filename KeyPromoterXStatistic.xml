@@ -462,7 +462,7 @@
           <IdeaActionID>ActivateRunToolWindow</IdeaActionID>
           <ShortCut>'Alt+4'</ShortCut>
           <Description>Run</Description>
-          <Count>31</Count>
+          <Count>32</Count>
         </Item>
       </Statistic>
       <Statistic Action="Run 'HelloWorld'">
@@ -591,6 +591,14 @@
           <ShortCut>'Shift+F10'</ShortCut>
           <Description>Run 'server_run'</Description>
           <Count>28</Count>
+        </Item>
+      </Statistic>
+      <Statistic Action="Run 'weather (1)'">
+        <Item>
+          <IdeaActionID>Run</IdeaActionID>
+          <ShortCut>'Shift+F10'</ShortCut>
+          <Description>Run 'weather (1)'</Description>
+          <Count>1</Count>
         </Item>
       </Statistic>
       <Statistic Action="Run 'web_log'">
