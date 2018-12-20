@@ -5,10 +5,10 @@ import org.apache.spark.{SparkConf, SparkContext}
 object TQ {
   def main(args: Array[String]): Unit = {
       var conf = new SparkConf()
-      conf.setMaster("local").setAppName("TQ")
+      conf.setMaster("local").setAppName("weather")
       var sc = new SparkContext(conf)
 
-     var lines = sc.textFile("tq")
+     var lines = sc.textFile("data/weather")
       var pair = lines.map(x =>(x.split(" ")(0),x.split("\t")(1)))
       var group =pair.reduceByKey((x,y) => if(x >= y) x else y)
     //var group = pair.groupByKey(0)

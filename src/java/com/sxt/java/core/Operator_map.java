@@ -21,7 +21,7 @@ public class Operator_map {
 		conf.setMaster("local");
 		conf.setAppName("map");
 		JavaSparkContext jsc = new JavaSparkContext(conf);
-		JavaRDD<String> line = jsc.textFile("./words.txt");
+		JavaRDD<String> line = jsc.textFile("data/words.txt");
 		JavaRDD<String> mapResult = line.map(new Function<String, String>() {
 
 			/**

@@ -8,7 +8,7 @@ object Operator_reduceByKey {
     val conf = new SparkConf()
     conf.setMaster("local").setAppName("reduceByKey")
     val sc = new SparkContext(conf)
-    val lines = sc.textFile("./words.txt")
+    val lines = sc.textFile("data/words.txt")
     val flatMap = lines.flatMap { _.split(" ")}
     val map = flatMap.map {(_,1)}
     map.reduceByKey(_+_).foreach{println}

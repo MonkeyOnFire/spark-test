@@ -8,7 +8,7 @@ object Operator_sortBy {
     val conf = new SparkConf()
     conf.setMaster("local").setAppName("sortBy")
     val sc = new SparkContext(conf)
-    val lines = sc.textFile("./words.txt")
+    val lines = sc.textFile("data/words.txt")
     val reduceResult = lines.flatMap { _.split(" ")}.map{ (_,1)}.reduceByKey(_+_)
     val result = reduceResult.sortBy(_._2,false)
     result.foreach{println}

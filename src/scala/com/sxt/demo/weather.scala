@@ -11,7 +11,7 @@ import org.apache.spark.{SparkConf, SparkContext}
 //    var conf = new SparkConf()
 //    conf.setMaster("local").setAppName("weather")
 //    var sc = new SparkContext(conf)
-//    var rdd1  = sc.textFile("./tq")
+//    var rdd1  = sc.textFile("data/weather")
 //    //val rdd2 = rdd1.map(line=>{var arr = line.split(" ")(1).split("\t");(arr(2).toString , arr(0).toString)})
 //
 //    var rdd2 = rdd1.map{ x => (x.split(" ")(0) -> x.split("\t")(1))}

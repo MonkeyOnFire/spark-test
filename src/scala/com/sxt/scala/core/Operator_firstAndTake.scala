@@ -8,7 +8,7 @@ object Operator_firstAndTake {
     val conf = new SparkConf()
     conf.setMaster("local").setAppName("firstAndTake")
     val sc = new SparkContext(conf)
-    val lines = sc.textFile("./words.txt")
+    val lines = sc.textFile("data/words.txt")
     lines.cache()
     val reduceResult = lines.flatMap { _.split(" ")}.map { (_,1)}.reduceByKey(_+_)
     reduceResult.take(1).foreach(println)

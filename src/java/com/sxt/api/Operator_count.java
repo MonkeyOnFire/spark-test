@@ -15,7 +15,7 @@ public class Operator_count {
 		conf.setMaster("local");
 		conf.setAppName("collect");
 		JavaSparkContext jsc = new JavaSparkContext(conf);
-		JavaRDD<String> lines = jsc.textFile("./words.txt");
+		JavaRDD<String> lines = jsc.textFile("data/words.txt");
 		long count = lines.count();
 		System.out.println(count);
 		jsc.stop();

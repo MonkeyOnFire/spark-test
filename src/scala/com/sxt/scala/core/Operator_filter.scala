@@ -8,7 +8,7 @@ object Operator_filter {
     val conf = new SparkConf()
     conf.setMaster("local").setAppName("filter")
     val sc =  new SparkContext(conf)
-    val lines = sc.textFile("./words.txt")
+    val lines = sc.textFile("data/words.txt")
     val result = lines.filter { _.indexOf("Spark") >= 0 }
     result.foreach { println}
     sc.stop()

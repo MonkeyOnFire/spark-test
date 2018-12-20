@@ -8,7 +8,7 @@ object Operator_collect {
     val conf = new SparkConf()
     conf.setMaster("local").setAppName("collect")
     val sc = new SparkContext(conf)
-    val lines = sc.textFile("./words.txt")
+    val lines = sc.textFile("data/words.txt")
     lines.collect().foreach { println }
     sc.stop()
   }

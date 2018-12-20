@@ -21,7 +21,7 @@ public class Operator_flatMap {
 		conf.setAppName("flatMap");
 
 		JavaSparkContext jsc = new JavaSparkContext(conf);
-		JavaRDD<String> lines = jsc.textFile("./words.txt");
+		JavaRDD<String> lines = jsc.textFile("data/words.txt");
 		JavaRDD<String> flatMapResult = lines.flatMap(new FlatMapFunction<String, String>() {
 
 			/**

@@ -8,7 +8,7 @@ object Operator_sample {
     val conf = new SparkConf()
     conf.setMaster("local").setAppName("sample")
     val sc = new SparkContext(conf)
-    val lines = sc.textFile("./words.txt")
+    val lines = sc.textFile("data/words.txt")
     lines.sample(true, 0.5,10).foreach { println}
   }
 }

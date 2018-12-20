@@ -8,7 +8,7 @@ object Operator_flatMap {
     val conf = new SparkConf()
     conf.setMaster("local").setAppName("flatMap")
     val sc = new SparkContext(conf)
-    val lines = sc.textFile("./words.txt")
+    val lines = sc.textFile("data/words.txt")
     val result = lines.flatMap { _.split(" ")}
     result.foreach { println}
     sc.stop()

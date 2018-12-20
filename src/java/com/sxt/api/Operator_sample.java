@@ -19,7 +19,7 @@ public class Operator_sample {
 		conf.setAppName("sample");
 		
 		JavaSparkContext jsc = new JavaSparkContext(conf);
-		JavaRDD<String> lines = jsc.textFile("./words.txt");
+		JavaRDD<String> lines = jsc.textFile("data/words.txt");
 		JavaPairRDD<String, Integer> flatMapToPair = lines.flatMapToPair(new PairFlatMapFunction<String, String, Integer>() {
 
 			/**

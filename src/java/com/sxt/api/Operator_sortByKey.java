@@ -19,7 +19,7 @@ public class Operator_sortByKey {
 		conf.setMaster("local");
 		conf.setAppName("sortByKey");
 		JavaSparkContext jsc = new JavaSparkContext(conf);
-		JavaRDD<String> lines = jsc.textFile("./words.txt");
+		JavaRDD<String> lines = jsc.textFile("data/words.txt");
 		JavaRDD<String> flatMap = lines.flatMap(new FlatMapFunction<String, String>() {
 
 			/**

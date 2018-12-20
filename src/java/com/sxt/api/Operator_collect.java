@@ -27,7 +27,7 @@ public class Operator_collect {
 		 * JavaSparkContext对象是spark运行的上下文，是通往集群的唯一通道。
 		 */
 		JavaSparkContext jsc = new JavaSparkContext(conf);
-		JavaRDD<String> lines = jsc.textFile("./words.txt");
+		JavaRDD<String> lines = jsc.textFile("data/words.txt");
 		JavaRDD<String> resultRDD = lines.filter(new Function<String, Boolean>() {
 
 			/**
