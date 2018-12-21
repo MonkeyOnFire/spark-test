@@ -19,7 +19,7 @@
 <configuration>
      <property>  
               <name>dfs.namenode.secondary.http-address</name>  
-              <value>bigdata01:9001</value>  
+              <value>node01:9001</value>
      </property>  
      <property>  
              <name>dfs.namenode.name.dir</name>  
@@ -48,27 +48,27 @@
  <!-- nn1的RPC通信地址 -->  
     <property>  
         <name>dfs.namenode.rpc-address.shsxt.nn1</name>  
-        <value>bigdata01:9000</value>  
+        <value>node01:9000</value>
     </property>  
     <!-- nn1的http通信地址 -->  
     <property>  
         <name>dfs.namenode.http-address.shsxt.nn1</name>  
-        <value>bigdata01:50070</value>  
+        <value>node01:50070</value>
     </property>  
     <!-- nn2的RPC通信地址 -->  
     <property>  
         <name>dfs.namenode.rpc-address.shsxt.nn2</name>  
-        <value>bigdata02:9000</value>  
+        <value>node02:9000</value>
     </property>  
     <!-- nn2的http通信地址 -->  
     <property>  
         <name>dfs.namenode.http-address.shsxt.nn2</name>  
-        <value>bigdata02:50070</value>  
+        <value>node02:50070</value>
     </property>  
     <!-- 指定NameNode的元数据在JournalNode上的存放位置 -->  
     <property>  
         <name>dfs.namenode.shared.edits.dir</name>  
-        <value>qjournal://bigdata01:8485;bigdata02:8485;bigdata03:8485/shsxt</value>  
+        <value>qjournal://node01:8485;node02:8485;node03:8485/shsxt</value>
     </property>  
     <!-- 指定JournalNode在本地磁盘存放数据的位置 -->  
     <property>  

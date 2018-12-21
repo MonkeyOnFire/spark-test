@@ -10,8 +10,8 @@ object JoinTest {
   def main(args: Array[String]): Unit = {
 
     val conf = new SparkConf()
-    conf.setMaster("spark://bigdata01:7077").setAppName("count")
-      .setJars(List("C:\\Users\\Sadrm\\Desktop\\bigdata03\\spark\\spark-test\\out\\artifacts\\spark_test_jar\\spark-test.jar"))
+    conf.setMaster("spark://node01:7077").setAppName("count")
+      .setJars(List("C:\\Users\\Sadrm\\Desktop\\node03\\spark\\spark-test\\out\\artifacts\\spark_test_jar\\spark-test.jar"))
     val sc = new SparkContext(conf)
 
     val empRDD = sc.parallelize(List(

@@ -25,7 +25,7 @@
 <!-- 指定zookeeper地址 -->  
 <property>  
 <name>ha.zookeeper.quorum</name>  
-<value>bigdata01:2181,bigdata02:2181,bigdata03:2181</value>  
+<value>node01:2181,node02:2181,node03:2181</value>
 </property>
 <!-- 指定hadoop临时目录 -->  
 <property>  

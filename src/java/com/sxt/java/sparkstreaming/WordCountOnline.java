@@ -46,7 +46,7 @@ public class WordCountOnline {
 //		JavaStreamingContext jsc = new JavaStreamingContext(sc,Durations.seconds(5));
 //		JavaSparkContext sparkContext = jsc.sparkContext();
 		
-		JavaReceiverInputDStream<String> lines = jsc.socketTextStream("bigdata01", 9999);
+		JavaReceiverInputDStream<String> lines = jsc.socketTextStream("node01", 9999);
 		
 		
 		JavaDStream<String> words = lines.flatMap(new FlatMapFunction<String, String>() {
