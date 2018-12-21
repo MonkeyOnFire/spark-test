@@ -35,7 +35,7 @@ public class WindowOperator {
 		/**
 		 * 注意：
 		 *  没有优化的窗口函数可以不设置checkpoint目录
-		 *  优化的窗口函数必须设置checkpoint目录		 
+		 *  优化的窗口函数必须设置checkpoint目录
 		 */
 //   		jssc.checkpoint("hdfs://node1:9000/spark/checkpoint");
    		jssc.checkpoint("./checkpoint");
